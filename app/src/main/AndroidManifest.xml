@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.lalaapps.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer">
+
+    <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.VIEW" />
+
+            <category android:name="android.intent.category.BROWSABLE" />
+
+            <data android:scheme="https" />
+        </intent>
+        <intent>
+            <action android:name="android.support.customtabs.action.CustomTabsService" />
+        </intent>
+    </queries>
+
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+
+    <application
+        android:name=".MyApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme_StepCounter">
+        <activity
+            android:name=".ui.PrivacyActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.ExitActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/admob_app_id" />
+
+        <activity
+            android:name=".ui.home.MainActivity"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity android:name=".ui.intro.IntroActivity" /> <!-- If you want to disable android.startup completely. -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+
+            <!-- If you are using androidx.startup to initialize other components -->
+            <meta-data
+                android:name="androidx.work.WorkManagerInitializer"
+                android:value="androidx.startup"
+                tools:node="remove" />
+        </provider>
+
+        <receiver android:name=".AlarmReceiver" />
+        <receiver
+            android:name=".widget.WidgetProvider4"
+            android:exported="false"
+            android:label="4x1">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_4x1" />
+        </receiver>
+        <receiver
+            android:name=".widget.WidgetProvider3"
+            android:exported="false"
+            android:label="3x1">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_3x1" />
+        </receiver>
+        <receiver
+            android:name=".widget.WidgetProvider2"
+            android:exported="false"
+            android:label="2x1">
+            <intent-filter>
+                <action android:name="android.appwidget.action.APPWIDGET_UPDATE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.appwidget.provider"
+                android:resource="@xml/widget_info_2x1" />
+        </receiver>
+        <receiver
+            android:name=".BootAndUpdateReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+
+        <service
+            android:name=".services.StepCountService"
+            android:icon="@drawable/ic_launcher_background"
+            android:label="StepCounterService" />
+
+        <receiver
+            android:name=".services.ScreenOnReceiver"
+            android:exported="false">
+            <intent-filter android:priority="90000">
+                <action android:name="android.intent.action.SCREEN_ON" />
+                <action android:name="android.intent.action.USER_PRESENT" />
+            </intent-filter>
+        </receiver> <!-- <activity -->
+        <!-- android:name="com.karumi.dexter.DexterActivity" -->
+        <!-- android:theme="@style/Dexter.Internal.Theme.Transparent" /> -->
+        <!-- <activity -->
+        <!-- android:name="com.google.android.gms.ads.AdActivity" -->
+        <!-- android:configChanges="smallestScreenSize|screenSize|uiMode|screenLayout|orientation|keyboardHidden|keyboard" -->
+        <!-- android:exported="false" -->
+        <!-- android:theme="@android:style/Theme.Translucent" /> -->
+        <!-- <provider -->
+        <!-- android:name="com.google.android.gms.ads.MobileAdsInitProvider" -->
+        <!-- android:authorities="com.kewitschka.stepcounter.mobileadsinitprovider" -->
+        <!-- android:exported="false" -->
+        <!-- android:initOrder="100" /> -->
+        <!-- <service -->
+        <!-- android:name="com.google.android.gms.ads.AdService" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" /> -->
+        <!-- <provider -->
+        <!-- android:name="androidx.work.impl.WorkManagerInitializer" -->
+        <!-- android:authorities="com.kewitschka.stepcounter.workmanager-init" -->
+        <!-- android:directBootAware="false" -->
+        <!-- android:exported="false" -->
+        <!-- android:multiprocess="true" /> -->
+        <!-- <service -->
+        <!-- android:name="androidx.work.impl.background.systemalarm.SystemAlarmService" -->
+        <!-- android:directBootAware="false" -->
+        <!-- android:enabled="@bool/enable_system_alarm_service_default" -->
+        <!-- android:exported="false" /> -->
+        <!-- <service -->
+        <!-- android:name="androidx.work.impl.background.systemjob.SystemJobService" -->
+        <!-- android:directBootAware="false" -->
+        <!-- android:enabled="@bool/enable_system_job_service_default" -->
+        <!-- android:exported="true" -->
+        <!-- android:permission="android.permission.BIND_JOB_SERVICE" /> -->
+        <!-- <receiver -->
+        <!-- android:name="androidx.work.impl.utils.ForceStopRunnable.BroadcastReceiver" -->
+        <!-- android:directBootAware="false" -->
+        <!-- android:enabled="true" -->
+        <!-- android:exported="false" /> -->
+        <!-- <receiver -->
+        <!-- android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryChargingProxy" -->
+        <!-- android:directBootAware="false" -->
+        <!-- android:enabled="false" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.ACTION_POWER_CONNECTED" /> -->
+        <!-- <action android:name="android.intent.action.ACTION_POWER_DISCONNECTED" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <receiver -->
+        <!-- android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.BatteryNotLowProxy" -->
+        <!-- android:directBootAware="false" -->
+        <!-- android:enabled="false" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.BATTERY_OKAY" /> -->
+        <!-- <action android:name="android.intent.action.BATTERY_LOW" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <receiver -->
+        <!-- android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.StorageNotLowProxy" -->
+        <!-- android:directBootAware="false" -->
+        <!-- android:enabled="false" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.intent.action.DEVICE_STORAGE_LOW" /> -->
+        <!-- <action android:name="android.intent.action.DEVICE_STORAGE_OK" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <receiver -->
+        <!-- android:name="androidx.work.impl.background.systemalarm.ConstraintProxy.NetworkStateProxy" -->
+        <!-- android:directBootAware="false" -->
+        <!-- android:enabled="false" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <receiver
+            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
+            android:directBootAware="false"
+            android:enabled="false"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+                <action android:name="android.intent.action.TIME_SET" />
+                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
+            </intent-filter>
+        </receiver> <!-- <receiver -->
+        <!-- android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" -->
+        <!-- android:directBootAware="false" -->
+        <!-- android:enabled="@bool/enable_system_alarm_service_default" -->
+        <!-- android:exported="false"> -->
+        <!-- <intent-filter> -->
+        <!-- <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" /> -->
+        <!-- </intent-filter> -->
+        <!-- </receiver> -->
+        <!-- <service -->
+        <!-- android:name="androidx.room.MultiInstanceInvalidationService" -->
+        <!-- android:directBootAware="true" -->
+        <!-- android:exported="false" /> -->
+        <!-- <provider -->
+        <!-- android:name="androidx.startup.InitializationProvider" -->
+        <!-- android:authorities="com.kewitschka.stepcounter.androidx-startup" -->
+        <!-- android:exported="false" -->
+        <!-- tools:replace="android:authorities"> -->
+        <!-- <meta-data -->
+        <!-- android:name="net.danlew.android.joda.JodaTimeInitializer" -->
+        <!-- android:value="androidx.startup" /> -->
+        <!-- </provider> -->
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.lalaapps.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.com.squareup.picasso"
+            android:exported="false"
+            tools:replace="android:authorities" />
+    </application>
+
+</manifest>

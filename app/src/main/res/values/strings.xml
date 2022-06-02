@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name"> Count &amp; Track Steps Pedometer</string>
+    <string name="achievements">Goal achievement</string>
+    <string name="averageCalories">Ø Calories</string>
+    <string name="averageKm">Ø Km</string>
+    <string name="averageMin">Ø Active (min)</string>
+    <string name="averageSteps">Ø Steps</string>
+    <string name="bright">Bright</string>
+    <string name="calories">Calories</string>
+    <!--    <string name="com_crashlytics_android_build_id">00000000000000000000000000000000</string>-->
+    <string name="configDescription">1. We need some details to make the calculations (km, calories etc.) as accurate as possible.</string>
+    <string name="dailyStepTarget">Daily step goal</string>
+    <string name="dark">Dark</string>
+    <!--    <string name="default_web_client_id">489998266475-5drfhiskj2q6li7eb9q4p0shp7g9qhbs.apps.googleusercontent.com</string>-->
+    <string name="friday">Fri</string>
+    <!--    <string name="gcm_defaultSenderId">489998266475</string>-->
+    <string name="gender">Gender</string>
+    <string name="goal_achieved_description">You have reached your daily step goal of %1$d! Congratulations!</string>
+    <string name="goal_achieved_title">Step goal achieved</string>
+    <!--    <string name="google_api_key">AIzaSyCYVjyDbUyoPhrOjIv98kUkf0px9N7UKLs</string>-->
+    <!--    <string name="google_app_id">1:489998266475:android:dfe29568f4712cb056412e</string>-->
+    <!--    <string name="google_crash_reporting_api_key">AIzaSyCYVjyDbUyoPhrOjIv98kUkf0px9N7UKLs</string>-->
+    <!--    <string name="google_storage_bucket">step-counter-359e7.appspot.com</string>-->
+    <string name="grant">grant</string>
+    <string name="info_channel_description">Other information e.g. daily goal reached</string>
+    <string name="kmTitle">Km</string>
+    <string name="minTitle">Min</string>
+    <string name="monday">Mon</string>
+    <string name="one_month">1 month</string>
+    <string name="one_week">1 week</string>
+    <string name="paused">paused</string>
+    <string name="permissionDescription">2. Furthermore the \"activity permission\" is required for the app to work.</string>
+    <string name="profile">Profile</string>
+    <string name="saturday">Sat</string>
+    <string name="service_channel_description">Step counter</string>
+    <string name="setup">Setup</string>
+    <string name="size">Size in cm</string>
+    <string name="statsTitle">Statistics</string>
+    <string name="steps">Steps</string>
+    <string name="sunday">Sun</string>
+    <string name="system">System</string>
+    <string name="target">Goal</string>
+    <string name="targetParam">Goal: %1$d</string>
+    <string name="theme">Theme</string>
+    <string name="thursday">Thu</string>
+    <string name="tuesday">Tue</string>
+    <string name="wednesday">Wed</string>
+    <string name="weight">Weight in kg</string>
+    <string name="yearOfBirth">Year of birth</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="share">Share App</string>
+    <string name="rate">Rate Us</string>
+    <string name="more">More App</string>
+    <!-- TODO: Remove or change this placeholder text -->
+</resources>

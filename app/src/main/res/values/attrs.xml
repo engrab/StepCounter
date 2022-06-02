@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <attr name="customNotificationBarColor" format="reference">
+    </attr>
+
+    <attr name="customTextColor" format="reference">
+    </attr>
+    <attr name="customTooltipBackgroundColor" format="reference">
+    </attr>
+    <attr name="customCardBackground" format="reference">
+    </attr>
+
+</resources>

@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:id="@+id/mainScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/default_margin"
+                android:text="@string/setup"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="?android:attr/colorPrimary" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/default_margin"
+                app:cardBackgroundColor="?attr/customCardBackground"
+                app:cardCornerRadius="@dimen/default_margin"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_margin">
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/larger_margin"
+                        android:gravity="center"
+                        android:text="@string/configDescription"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/large_margin"
+                        android:text="@string/gender"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/default_margin"
+                            android:baselineAligned="false">
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/woman"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_woman" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="0.5"
+                                android:gravity="center"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:id="@+id/man"
+                                    android:layout_width="55dp"
+                                    android:layout_height="55dp"
+                                    android:adjustViewBounds="true"
+                                    android:src="@drawable/ic_man" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/larger_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/yearOfBirth"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <it.sephiroth.android.library.numberpicker.NumberPicker
+                            android:id="@+id/yearOfBirth"
+                            style="@style/NumberPicker.None"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:progress="2000"
+                            app:picker_editTextStyle="@style/numberPickerText"
+                            app:picker_max="2020"
+                            app:picker_min="1920"
+                            app:picker_orientation="vertical"
+                            app:picker_stepSize="1"
+                            app:picker_tracker="exponential" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/larger_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/weight"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <it.sephiroth.android.library.numberpicker.NumberPicker
+                            android:id="@+id/weight"
+                            style="@style/NumberPicker.None"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:progress="65"
+                            app:picker_editTextStyle="@style/numberPickerText"
+                            app:picker_max="200"
+                            app:picker_min="30"
+                            app:picker_orientation="vertical"
+                            app:picker_stepSize="1"
+                            app:picker_tracker="exponential" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/larger_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/size"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <it.sephiroth.android.library.numberpicker.NumberPicker
+                            android:id="@+id/size"
+                            style="@style/NumberPicker.None"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:progress="65"
+                            app:picker_editTextStyle="@style/numberPickerText"
+                            app:picker_max="200"
+                            app:picker_min="120"
+                            app:picker_orientation="vertical"
+                            app:picker_stepSize="1"
+                            app:picker_tracker="exponential" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/larger_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/dailyStepTarget"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <it.sephiroth.android.library.numberpicker.NumberPicker
+                            android:id="@+id/stepTarget"
+                            style="@style/NumberPicker.None"
+                            android:layout_width="150dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:progress="5000"
+                            app:picker_editTextStyle="@style/numberPickerText"
+                            app:picker_max="30000"
+                            app:picker_min="500"
+                            app:picker_orientation="vertical"
+                            app:picker_stepSize="500"
+                            app:picker_tracker="exponential" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/themeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/larger_margin"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:text="@string/theme"
+                            android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                        <RadioGroup
+                            android:id="@+id/themes"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/darkModeSystem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="?attr/customTextColor"
+                                android:text="@string/system"
+                                android:textColor="?attr/customTextColor" />
+
+                            <RadioButton
+                                android:id="@+id/darkModeNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="?attr/customTextColor"
+                                android:text="@string/bright"
+                                android:textColor="?attr/customTextColor" />
+
+                            <RadioButton
+                                android:id="@+id/darkModeYes"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="?attr/customTextColor"
+                                android:text="@string/dark"
+                                android:textColor="?attr/customTextColor" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/permissionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/default_margin"
+                app:cardBackgroundColor="?attr/customCardBackground"
+                app:cardCornerRadius="@dimen/default_margin"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/default_margin">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:paddingStart="@dimen/default_margin"
+                        android:paddingTop="@dimen/larger_margin"
+                        android:paddingEnd="@dimen/default_margin"
+                        android:paddingBottom="@dimen/larger_margin"
+                        android:text="@string/permissionDescription"
+                        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+                    <Button
+                        android:id="@+id/grant"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/rounded_button"
+                        android:text="@string/grant"
+                        android:textSize="@dimen/small_text" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
