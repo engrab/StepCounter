@@ -8,9 +8,9 @@
     <color name="lightBlue">#48475c</color>
     <color name="white">#FFFFFF</color>
 
-    <color name="primary">#009688</color>
-    <color name="primary_dark">#00796B</color>
-    <color name="primary_back">#003631</color>
+    <color name="primary">#2196F3</color>
+    <color name="primary_dark">#1976D2</color>
+    <color name="primary_back">#FFFFFF</color>
     <color name="icons">#FFFFFF</color>
     <color name="red">#FF1100</color>
     <color name="yellow">#FF9800</color>

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.lalaapps.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer">
+    package="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer">
 
     <uses-permission android:name="android.permission.ACTIVITY_RECOGNITION" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
@@ -27,7 +27,7 @@
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
 
     <application
-        android:name=".MyApplication"
+        android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -35,13 +35,11 @@
         android:supportsRtl="true"
         android:theme="@style/Theme_StepCounter">
         <activity
-            android:name=".ui.PrivacyActivity"
+            android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.activities.mixActivities.PrivacyActivity"
             android:exported="false" />
+
         <activity
-            android:name=".ui.ExitActivity"
-            android:exported="false" />
-        <activity
-            android:name=".ui.SplashActivity"
+            android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.activities.mixActivities.SplashActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,10 +53,10 @@
             android:value="@string/admob_app_id" />
 
         <activity
-            android:name=".ui.home.MainActivity"
+            android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.activities.mainActivities.MainActivity"
             android:exported="false"
             android:hardwareAccelerated="true" />
-        <activity android:name=".ui.intro.IntroActivity" /> <!-- If you want to disable android.startup completely. -->
+        <activity android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.activities.introActivities.IntroActivity" /> <!-- If you want to disable android.startup completely. -->
         <provider
             android:name="androidx.startup.InitializationProvider"
             android:authorities="${applicationId}.androidx-startup"
@@ -72,9 +70,9 @@
                 tools:node="remove" />
         </provider>
 
-        <receiver android:name=".AlarmReceiver" />
+        <receiver android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.receiverClasses.AlarmReceiver" />
         <receiver
-            android:name=".widget.WidgetProvider4"
+            android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.widgetClasses.WidgetProvider4"
             android:exported="false"
             android:label="4x1">
             <intent-filter>
@@ -86,7 +84,7 @@
                 android:resource="@xml/widget_info_4x1" />
         </receiver>
         <receiver
-            android:name=".widget.WidgetProvider3"
+            android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.widgetClasses.WidgetProvider3"
             android:exported="false"
             android:label="3x1">
             <intent-filter>
@@ -98,7 +96,7 @@
                 android:resource="@xml/widget_info_3x1" />
         </receiver>
         <receiver
-            android:name=".widget.WidgetProvider2"
+            android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.widgetClasses.WidgetProvider2"
             android:exported="false"
             android:label="2x1">
             <intent-filter>
@@ -110,7 +108,7 @@
                 android:resource="@xml/widget_info_2x1" />
         </receiver>
         <receiver
-            android:name=".BootAndUpdateReceiver"
+            android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.receiverClasses.BootAndUpdateReceiver"
             android:exported="false">
             <intent-filter>
                 <action android:name="android.intent.action.MY_PACKAGE_REPLACED" />
@@ -119,12 +117,12 @@
         </receiver>
 
         <service
-            android:name=".services.StepCountService"
+            android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.servicesClasses.StepCountService"
             android:icon="@drawable/ic_launcher_background"
             android:label="StepCounterService" />
 
         <receiver
-            android:name=".services.ScreenOnReceiver"
+            android:name="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.servicesClasses.ScreenOnReceiver"
             android:exported="false">
             <intent-filter android:priority="90000">
                 <action android:name="android.intent.action.SCREEN_ON" />
@@ -242,7 +240,7 @@
         <!-- </provider> -->
         <provider
             android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="com.lalaapps.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.com.squareup.picasso"
+            android:authorities="com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer.com.squareup.picasso"
             android:exported="false"
             tools:replace="android:authorities" />
     </application>
