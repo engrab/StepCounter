@@ -7,7 +7,7 @@ android {
 //    buildToolsVersion "30.0.3"
 
     defaultConfig {
-        applicationId "com.accountname.stepscounter.pedometer.mapmywalk.trackmysteps.walkingcounter.countsteps.pacer"
+        applicationId "com.towertech.trackmysteps.fitnesstracker.walkingtracker.stepscounter.mapmywalk.pedometer"
         minSdkVersion 21
         targetSdkVersion 32
         versionCode 1
