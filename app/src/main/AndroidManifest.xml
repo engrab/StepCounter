@@ -31,7 +31,7 @@
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme_StepCounter">
         <activity
@@ -48,9 +48,6 @@
             </intent-filter>
         </activity>
 
-        <meta-data
-            android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="@string/admob_app_id" />
 
         <activity
             android:name="com.towertech.trackmysteps.fitnesstracker.walkingtracker.stepscounter.mapmywalk.pedometer.activities.mainActivities.MainActivity"
@@ -206,43 +203,44 @@
         <!-- <action android:name="android.net.conn.CONNECTIVITY_CHANGE" /> -->
         <!-- </intent-filter> -->
         <!-- </receiver> -->
-        <receiver
-            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"
-            android:directBootAware="false"
-            android:enabled="false"
-            android:exported="false">
-            <intent-filter>
-                <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.TIME_SET" />
-                <action android:name="android.intent.action.TIMEZONE_CHANGED" />
-            </intent-filter>
-        </receiver> <!-- <receiver -->
-        <!-- android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver" -->
-        <!-- android:directBootAware="false" -->
-        <!-- android:enabled="@bool/enable_system_alarm_service_default" -->
-        <!-- android:exported="false"> -->
-        <!-- <intent-filter> -->
-        <!-- <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" /> -->
-        <!-- </intent-filter> -->
-        <!-- </receiver> -->
-        <!-- <service -->
-        <!-- android:name="androidx.room.MultiInstanceInvalidationService" -->
-        <!-- android:directBootAware="true" -->
-        <!-- android:exported="false" /> -->
-        <!-- <provider -->
-        <!-- android:name="androidx.startup.InitializationProvider" -->
-        <!-- android:authorities="com.kewitschka.stepcounter.androidx-startup" -->
-        <!-- android:exported="false" -->
-        <!-- tools:replace="android:authorities"> -->
-        <!-- <meta-data -->
-        <!-- android:name="net.danlew.android.joda.JodaTimeInitializer" -->
-        <!-- android:value="androidx.startup" /> -->
-        <!-- </provider> -->
-        <provider
-            android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="com.towertech.trackmysteps.fitnesstracker.walkingtracker.stepscounter.mapmywalk.pedometer.com.squareup.picasso"
-            android:exported="false"
-            tools:replace="android:authorities" />
+<!--        <receiver-->
+<!--            android:name="androidx.work.impl.background.systemalarm.RescheduleReceiver"-->
+<!--            android:directBootAware="false"-->
+<!--            android:enabled="false"-->
+<!--            android:exported="false">-->
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.BOOT_COMPLETED" />-->
+<!--                <action android:name="android.intent.action.TIME_SET" />-->
+<!--                <action android:name="android.intent.action.TIMEZONE_CHANGED" />-->
+<!--            </intent-filter>-->
+<!--        </receiver>-->
+<!--         <receiver-->
+<!--         android:name="androidx.work.impl.background.systemalarm.ConstraintProxyUpdateReceiver"-->
+<!--         android:directBootAware="false"-->
+<!--         android:enabled="@bool/enable_system_alarm_service_default"-->
+<!--         android:exported="false">-->
+<!--         <intent-filter>-->
+<!--         <action android:name="androidx.work.impl.background.systemalarm.UpdateProxies" />-->
+<!--         </intent-filter>-->
+<!--         </receiver>-->
+<!--         <service-->
+<!--         android:name="androidx.room.MultiInstanceInvalidationService"-->
+<!--         android:directBootAware="true"-->
+<!--         android:exported="false" />-->
+<!--         <provider-->
+<!--         android:name="androidx.startup.InitializationProvider"-->
+<!--         android:authorities="com.kewitschka.stepcounter.androidx-startup"-->
+<!--         android:exported="false"-->
+<!--         tools:replace="android:authorities">-->
+<!--         <meta-data-->
+<!--         android:name="net.danlew.android.joda.JodaTimeInitializer"-->
+<!--         android:value="androidx.startup" />-->
+<!--         </provider>-->
+<!--        <provider-->
+<!--            android:name="com.squareup.picasso.PicassoProvider"-->
+<!--            android:authorities="com.towertech.trackmysteps.fitnesstracker.walkingtracker.stepscounter.mapmywalk.pedometer.com.squareup.picasso"-->
+<!--            android:exported="false"-->
+<!--            tools:replace="android:authorities" />-->
     </application>
 
 </manifest>

@@ -27,6 +27,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         app:sdMainFabOpenedIconColor="@color/icons"
+        app:sdMainFabClosedIconColor="@color/white"
         app:sdMainFabOpenedSrc="@drawable/ic_baseline_close_24"
         app:sdMainFabClosedSrc="@drawable/ic_baseline_share_24" />
 

@@ -17,7 +17,7 @@ import com.unity3d.mediation.errors.ShowError;
 
 public class Unity {
 
-    private static String GameID = "abcd";
+    private static String GameID = "4796273";
     private static final String mInterstitialAdUnitId = "Interstitial_Android";
     private static InterstitialAd mInterstitialAd;
     private static  boolean isLoaded=false;

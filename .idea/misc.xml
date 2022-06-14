@@ -6,12 +6,13 @@
         <entry key="app/src/main/res/drawable/ic_baseline_apps_24.xml" value="0.2765" />
         <entry key="app/src/main/res/drawable/rounded_button.xml" value="0.1655" />
         <entry key="app/src/main/res/layout/activity_exit.xml" value="0.3265625" />
-        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.15208333333333332" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.25" />
         <entry key="app/src/main/res/layout/exit_dialog.xml" value="0.3255208333333333" />
         <entry key="app/src/main/res/layout/home_fragment.xml" value="0.3265625" />
         <entry key="app/src/main/res/layout/main_activity.xml" value="0.3265625" />
         <entry key="app/src/main/res/layout/profile_fragment.xml" value="0.15208333333333332" />
         <entry key="app/src/main/res/menu/menu_share.xml" value="0.3265625" />
+        <entry key="app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml" value="0.1655" />
       </map>
     </option>
   </component>

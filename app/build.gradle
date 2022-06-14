@@ -17,19 +17,9 @@ android {
     }
 
     buildTypes {
-        debug {
-            resValue 'string', 'admob_app_id', '"ca-app-pub-3940256099942544~3347511713"'
-            resValue 'string', 'app_open', '"ca-app-pub-3940256099942544/3419835294"'
-            resValue 'string', 'app_banner', '"ca-app-pub-3940256099942544/6300978111"'
-            resValue 'string', 'app_inters', '"ca-app-pub-3940256099942544/1033173712"'
-            resValue 'string', 'app_native', '"ca-app-pub-3940256099942544/1044960115"'
-        }
+
         release {
-            resValue 'string', 'admob_app_id', '"ca-app-pub-3940256099942544~3347511713"'
-            resValue 'string', 'app_open', '"ca-app-pub-3940256099942544/3419835294"'
-            resValue 'string', 'app_banner', '"ca-app-pub-3940256099942544/6300978111"'
-            resValue 'string', 'app_inters', '"ca-app-pub-3940256099942544/1033173712"'
-            resValue 'string', 'app_native', '"ca-app-pub-3940256099942544/1044960115"'
+           
             minifyEnabled true
             shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'

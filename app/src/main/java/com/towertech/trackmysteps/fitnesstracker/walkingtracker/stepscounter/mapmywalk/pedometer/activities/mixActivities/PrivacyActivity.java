@@ -17,7 +17,7 @@ import com.towertech.trackmysteps.fitnesstracker.walkingtracker.stepscounter.map
 
 public class PrivacyActivity extends AppCompatActivity {
 
-    public static final String URL = "https://www.google.com/";
+    public static final String URL = "https://sites.google.com/view/privacy-policy-towertech-apps/home";
     private Toolbar toolbar;
     private WebView privacy_policy;
     private ProgressBar progressBar_policy;
