@@ -83,6 +83,7 @@ public class PrivacyActivity extends AppCompatActivity {
 
     @Override
     public void onBackPressed() {
-        super.onBackPressed();
+        startActivity(new Intent(PrivacyActivity.this, MainActivity.class));
+        finish();
     }
 }

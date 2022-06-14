@@ -64,11 +64,12 @@ public class BaseMainActivity extends AppCompatActivity {
                 .setFabImageTintColor(ResourcesCompat.getColor(getResources(), R.color.white, null))
                 .setLabel(R.string.more)
                 .create());
+
         Drawable privacy = AppCompatResources.getDrawable(this, R.drawable.ic_baseline_privacy_tip_24);
         speedDialView.addActionItem(new SpeedDialActionItem.Builder(R.id.navPrivacy, privacy)
                 .setFabBackgroundColor(ResourcesCompat.getColor(getResources(), R.color.red, null))
                 .setFabImageTintColor(ResourcesCompat.getColor(getResources(), R.color.white, null))
-                .setLabel(R.string.more)
+                .setLabel(R.string.privacy_policy)
                 .create());
 //        speedDialView.addActionItem(
 //                SpeedDialActionItem.Builder(R.id.navShare, drawable)
@@ -97,6 +98,7 @@ public class BaseMainActivity extends AppCompatActivity {
                         Intent intent1 = new Intent(BaseMainActivity.this, PrivacyActivity.class);
                         intent1.putExtra("key", true);
                         startActivity(intent1);
+                        finish();
 
                         return true;
                     case R.id.navShare:
@@ -120,9 +122,9 @@ public class BaseMainActivity extends AppCompatActivity {
                         return true;
                     case R.id.navMore:
                         try {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://search?q=pub:Developer+Name+Here")));
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("market://search?q=pub:Tower+Tech+Games+And+Apps")));
                         } catch (android.content.ActivityNotFoundException anfe) {
-                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Lala+Apps+Studio")));
+                            startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://play.google.com/store/apps/developer?id=Tower+Tech+Games+And+Apps")));
                         }
                         return true;
                 }
